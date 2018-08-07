@@ -44,12 +44,13 @@ import java.util.*;
 
 /**
  * Interface through which a {@link Filter} may be further configured.
- *
+ * 动态注册filter
  * @since Servlet 3.0
  */
 public interface FilterRegistration extends Registration {
 
     /**
+     * 设置过滤器拦截哪些servlet
      * Adds a filter mapping with the given servlet names and dispatcher
      * types for the Filter represented by this FilterRegistration.
      *
@@ -95,6 +96,7 @@ public interface FilterRegistration extends Registration {
     public Collection<String> getServletNameMappings();
 
     /**
+     * 设置filter拦截哪些url
      * Adds a filter mapping with the given url patterns and dispatcher
      * types for the Filter represented by this FilterRegistration.
      *

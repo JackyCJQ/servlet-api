@@ -49,7 +49,9 @@ import javax.servlet.annotation.MultipartConfig;
  */
 public class MultipartConfigElement {
 
+    //配置文件位置
     private String location;
+    //文件大小
     private long maxFileSize;
     private long maxRequestSize;
     private int fileSizeThreshold;

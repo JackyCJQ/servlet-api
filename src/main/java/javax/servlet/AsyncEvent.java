@@ -41,6 +41,7 @@
 package javax.servlet;
 
 /**
+ *关联上一个异常事件
  * Event that gets fired when the asynchronous operation initiated on a 
  * ServletRequest (via a call to {@link ServletRequest#startAsync} or
  * {@link ServletRequest#startAsync(ServletRequest, ServletResponse)})

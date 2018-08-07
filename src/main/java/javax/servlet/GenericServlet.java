@@ -22,7 +22,7 @@ import java.util.Enumeration;
 import java.util.ResourceBundle;
 
 /**
- *
+ *通用的的servlet
  * Defines a generic, protocol-independent
  * servlet. To write an HTTP servlet for use on the
  * Web, extend {@link javax.servlet.http.HttpServlet} instead.
@@ -51,8 +51,7 @@ public abstract class GenericServlet
     implements Servlet, ServletConfig, java.io.Serializable
 {
     private static final String LSTRING_FILE = "javax.servlet.LocalStrings";
-    private static ResourceBundle lStrings =
-        ResourceBundle.getBundle(LSTRING_FILE);
+    private static ResourceBundle lStrings = ResourceBundle.getBundle(LSTRING_FILE);
 
     private transient ServletConfig config;
     

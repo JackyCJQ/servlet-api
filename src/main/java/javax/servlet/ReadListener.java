@@ -44,6 +44,7 @@ import java.io.IOException;
 import java.util.EventListener;
 
 /**
+ * http请求的资源可以被读取
  * <p>
  * This class represents a call-back mechanism that will notify implementations
  * as HTTP request data becomes available to be read without blocking.

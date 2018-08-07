@@ -108,11 +108,13 @@ public interface Filter {
      * to indicate to a filter that it is being
      * taken out of service.</p>
      * <p>
+     *   这个方法只会被调用一次
      * <p>This method is only called once all threads within the filter's
      * doFilter method have exited or after a timeout period has passed.
      * After the web container calls this method, it will not call the
      * doFilter method again on this instance of the filter.</p>
      * <p>
+     *  为了清除所引用的资源
      * <p>This method gives the filter an opportunity to clean up any
      * resources that are being held (for example, memory, file handles,
      * threads) and make sure that any persistent state is synchronized

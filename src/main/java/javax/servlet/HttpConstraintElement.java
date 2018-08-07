@@ -46,6 +46,7 @@ import javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic;
 import javax.servlet.annotation.ServletSecurity.TransportGuarantee;
 
 /**
+ * http约束元素
  * Java Class representation of an {@link HttpConstraint} annotation value.
  *
  * @since Servlet 3.0
@@ -64,6 +65,7 @@ public class HttpConstraintElement {
     }
 
     /**
+     * 默认不需要权限验证
      * Convenience constructor to establish <tt>EmptyRoleSemantic.DENY</tt>
      *
      * @param semantic should be EmptyRoleSemantic.DENY

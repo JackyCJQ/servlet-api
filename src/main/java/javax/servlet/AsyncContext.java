@@ -41,12 +41,14 @@
 package javax.servlet;
 
 /**
+ * 异步操作上下文
  * Class representing the execution context for an asynchronous operation
  * that was initiated on a ServletRequest.
  *
  * <p>An AsyncContext is created and initialized by a call to
  * {@link ServletRequest#startAsync()} or
  * {@link ServletRequest#startAsync(ServletRequest, ServletResponse)}.
+ * 多次调用只初始化一次
  * Repeated invocations of these methods will return the same AsyncContext
  * instance, reinitialized as appropriate.
  *
@@ -112,6 +114,7 @@ public interface AsyncContext {
 
 
     /**
+     * 返回初始化这个AsyncContext的ServletRequest请求
      * Gets the request that was used to initialize this AsyncContext
      * by calling {@link ServletRequest#startAsync()} or
      * {@link ServletRequest#startAsync(ServletRequest, ServletResponse)}.
@@ -126,6 +129,7 @@ public interface AsyncContext {
 
 
     /**
+     * 返回初始化这个AsyncContext的ServletResponse请求
      * Gets the response that was used to initialize this AsyncContext
      * by calling {@link ServletRequest#startAsync()} or
      * {@link ServletRequest#startAsync(ServletRequest, ServletResponse)}.
@@ -142,7 +146,7 @@ public interface AsyncContext {
     /**
      * Checks if this AsyncContext was initialized with the original or
      * application-wrapped request and response objects.
-     * 
+     * 是由包装后的 request and response objects初始化 还是没有包转的
      * <p>This information may be used by filters invoked in the
      * <i>outbound</i> direction, after a request was put into
      * asynchronous mode, to determine whether any request and/or response

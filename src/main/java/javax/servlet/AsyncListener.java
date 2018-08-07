@@ -44,6 +44,8 @@ import java.io.IOException;
 import java.util.EventListener;
 
 /**
+ * EventListener 是一个标记接口  all event listener interfaces must extend.
+ * 监听 asynchronous operation 操作
  * Listener that will be notified in the event that an asynchronous
  * operation initiated on a ServletRequest to which the listener had been 
  * added has completed, timed out, or resulted in an error.

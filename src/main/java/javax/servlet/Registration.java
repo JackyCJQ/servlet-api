@@ -65,6 +65,7 @@ import java.util.Set;
 public interface Registration {
 
     /**
+     * 返回Servlet or Filter的名字
      * Gets the name of the Servlet or Filter that is represented by this
      * Registration.
      *
@@ -74,6 +75,7 @@ public interface Registration {
     public String getName();
 
     /**
+     * 返回Servlet or Filter 全限定名
      * Gets the fully qualified class name of the Servlet or Filter that
      * is represented by this Registration.
      *
@@ -84,6 +86,7 @@ public interface Registration {
     public String getClassName();
 
     /**
+     * 设置初始化参数
      * Sets the initialization parameter with the given name and value
      * on the Servlet or Filter that is represented by this Registration.
      *
@@ -165,6 +168,7 @@ public interface Registration {
     interface Dynamic extends Registration {
 
         /**
+         * 是否支持动态操作
          * Configures the Servlet or Filter represented by this dynamic
          * Registration as supporting asynchronous operations or not.
          *

@@ -119,6 +119,7 @@ public abstract class HttpFilter extends GenericFilter
      */
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+         //只是拦截http请求
         if (!(req instanceof HttpServletRequest &&
                 res instanceof HttpServletResponse)) {
             throw new ServletException("non-HTTP request or response");
